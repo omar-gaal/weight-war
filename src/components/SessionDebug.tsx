@@ -3,8 +3,11 @@
 import { useEffect, useState } from 'react'
 import { supabaseBrowser } from '../lib/supabase/browser' 
 
+
+
 export function SessionDebug() {
   const [session, setSession] = useState<any>(null)
+
 
   useEffect(() => {
     supabaseBrowser.auth.getSession().then(({ data }) => {
